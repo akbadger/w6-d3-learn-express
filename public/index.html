@@ -29,7 +29,7 @@
             </div>
 
             <div class="col-sm-6 col-sm-offset-6">
-                <div class="form-group">
+                <div class=" category-input form-group">
                     <label for="category" id="categoryLabel">Category:</label>
                     <select id="categoryItem" class="form-control">
                         <option value="Personal">Personal</option>
@@ -42,7 +42,7 @@
 
                 <div class="input-group">
                     <input id="todoItem" type="text" class="form-control" placeholder="What do you need to do?">
-                    <input id="dueDate" type="text" class="form-control" placeholder="Due date">
+                    <input id="dueDate datepicker" type="text" class="form-control" placeholder="Due date">
                     <span class="input-group-btn">
                     <button id="todoButton" class="btn btn-default" type="button">Add</button>
                     </span>
@@ -72,6 +72,12 @@
 
 
         <script src="js/todos.js"></script>
+        <script src="pikaday.js"></script>
+        <script>
+            var picker = new Pikaday({
+                field: document.getElementById('datepicker')
+            });
+        </script>
 </body>
 
 </html>

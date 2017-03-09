@@ -54,7 +54,7 @@ function loopTodos(todos) {
 }
 
 function showTodos(todo) {
-    var todoList = `<li class="list-group-item">${todo.todo} ${todo.category} ${todo.due_date}</li>`
+    var todoList = `<li class="glyphicon glyphicon-ok list-group-item"> ${todo.todo} <span class="li-item badge">${todo.category}</span> <span class="li-item badge">${todo.due_date}</span></li>`
 
     document.querySelector('#todos').innerHTML = todoList + document.querySelector('#todos').innerHTML;
 }

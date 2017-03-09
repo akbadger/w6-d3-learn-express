@@ -41,3 +41,7 @@ label {
     font-weight: normal;
     letter-spacing: 1.2px;
 }
+
+.list-group-item>.badge {
+    font-weight: 300;
+}

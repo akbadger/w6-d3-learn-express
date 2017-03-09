@@ -14,7 +14,7 @@ module.exports.setup = (router, uploads, knex) => {
 
     router.post('/todos', function (request, response) {
 
-        let now = moment().format('YYYY-MM-DD')
+        let now = moment().format('MMMM Do YYYY, h:mm:ss a')
 
         let todo = {
             todo: request.body.todo.trim(),
