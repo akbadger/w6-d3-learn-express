@@ -6,15 +6,14 @@ module.exports.setup = (router, uploads, knex) => {
 
     // 2. Define routes /api/v1 is already on the route because of routesApiV1 variable in todos.js
     router.get('/todos', function(request, response) {
-
-        knex.select().table('todos').orderBy('id', 'asc').then(function(data) {
+        knex.select('*').table('todos').orderBy('category', 'asc').then(function(data) {
             response.json(data)
         })
     })
 
     router.post('/todos', function (request, response) {
 
-        let now = moment().format('MMMM Do YYYY, h:mm:ss a')
+        let now = moment().format('YYYY-MM-DD HH:mm:ss')
 
         let todo = {
             todo: request.body.todo.trim(),
